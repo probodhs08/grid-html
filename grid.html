@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>grid
+</title>
+<style>
+.container > div{
+    background-color: aqua;
+    text-align: center;
+}
+.container{
+display:grid;
+gap: 10px;
+grid-template-areas:
+'header header header header header header'
+'context context introduction introduction introduction introduction'
+'left content left content left content right context right context right context'
+'footer footer footer footer footer footer'
+}
+@media(max-width:500px)
+{
+.container{
+    grid-template-areas:'header header header header header header'
+    'context context introduction introduction introduction introduction'
+    'left content left content left content right context right context right context'
+    'left content left content left content right context right context right context'
+ 
+}
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="item">header</div>
+    <div class="item">content</div>
+    <div class="item">portfolio</div>
+    <div class="item">left content</div>
+    <div class="item">right content</div>
+    <div class="item">footer</div>
+</div>
+</body>
+</html>
